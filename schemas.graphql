@@ -8,12 +8,19 @@
     apellido: String
  }
 
+ type Casa{
+    direccion: String
+    personas: [User]
+ }
+
+ input CasaInput{
+    direccion: String
+    personas: [User]
+ }
+
   type Query {
-    quoteOfTheDay: String
-    random: Float!
-    rollThreeDice: [Int]
-    pruebas: [User]
-    buscar(name: String): [User]
+    buscarUsuario(key: String): [User]
+    buscarCasa(direccion: String): [Casa]
   }
 
   type Mutation {
