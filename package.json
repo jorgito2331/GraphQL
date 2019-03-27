@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon -e js,json,graphql index.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,9 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "graphql-yoga": "^1.17.4"
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.4",
+    "mongoose": "^5.4.20"
   }
 }

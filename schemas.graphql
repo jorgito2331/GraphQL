@@ -1,0 +1,21 @@
+ type User {
+    nombre: String
+    apellido: String
+ }
+
+  input UserInput {
+    nombre: String
+    apellido: String
+ }
+
+  type Query {
+    quoteOfTheDay: String
+    random: Float!
+    rollThreeDice: [Int]
+    pruebas: [User]
+    buscar(name: String): [User]
+  }
+
+  type Mutation {
+    CrearUsuario(usuario: UserInput): User
+  }
