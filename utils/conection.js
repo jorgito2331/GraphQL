@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
-const DB_URL = 'mongodb+srv://root:123456789@cluster0-p3sxk.mongodb.net/test?retryWrites=true'
-const connectDb = () => mongoose.connect(DB_URL, { useCreateIndex: true, useNewUrlParser: true })
+const uri = "mongodb+srv://jorge:Admin1234@cluster0-p3sxk.mongodb.net/test?retryWrites=true";
+const connectDb = () => mongoose.connect(uri, { useCreateIndex: true, useNewUrlParser: true })
 
 module.exports = {
   connectDb

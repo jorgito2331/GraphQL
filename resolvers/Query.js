@@ -1,11 +1,11 @@
 const mock = require('../mock')
 const usuarioModel = require('../model/Usuario')
 
-const buscarUsuario = (_, { name }) => mock.filter((user) => user.name.includes(name))
+const buscarUsuario = (_, { nombre }) => usuarioModel.find({nombre: nombre})
 
-const buscarCasa = (_, {direccion}) => usuarioModel.find()
+const Usuarios = (_, {direccion}) => usuarioModel.find()
 
 module.exports = {
   buscarUsuario,
-  buscarCasa
+  Usuarios
 }

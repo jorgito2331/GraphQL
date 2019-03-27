@@ -1,9 +1,11 @@
  type User {
+    _id: ID
     nombre: String
     apellido: String
  }
 
   input UserInput {
+    _id: ID
     nombre: String
     apellido: String
  }
@@ -13,16 +15,12 @@
     personas: [User]
  }
 
- input CasaInput{
-    direccion: String
-    personas: [User]
- }
-
   type Query {
-    buscarUsuario(key: String): [User]
-    buscarCasa(direccion: String): [Casa]
+    buscarUsuario(nombre: String): [User]
+    Usuarios: [User]
   }
 
   type Mutation {
     CrearUsuario(usuario: UserInput): User
+    EliminarUsuario(usuario: UserInput): User
   }
